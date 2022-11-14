@@ -45,7 +45,7 @@
                                     </p>
                                 @endif
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <a class="btn btn-block w-50 mx-auto btn-outline-info"
+                                    <a class="btn btn-block w-50 mx-auto btn-outline-info" target="_blank"
                                         href="{{ $service->btn_link }}">{{ $service->btn_text ?? '' }}</a>
                                 </div>
                             </div>
