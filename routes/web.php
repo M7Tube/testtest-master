@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomePage\HomePageController;
+use App\Models\Item;
 use App\Models\NewsletterEmail;
 use App\Models\Post;
 use App\Models\Services;
@@ -66,7 +67,7 @@ Route::group(['prefix' => '{language}', 'middleware' => 'auth'], function () {
     //Statistics page in dashboard
     Route::view('/Statistics', 'pages.Dashboard.Statistics.Statistics')->name('Statistics');
     //Services page in dashboard
-    Route::view('/Services', 'pages.Dashboard.Services.Services',[
+    Route::view('/Services', 'pages.Dashboard.Services.Services', [
         'S' => Services::latest()->paginate(5),
     ])->name('Services');
     //Edit Service page in dashboard
@@ -74,7 +75,7 @@ Route::group(['prefix' => '{language}', 'middleware' => 'auth'], function () {
     //Create Service page in dashboard
     Route::view('/CreateService', 'pages.Dashboard.Services.CreateService')->name('CreateService');
     //Posts page in dashboard
-    Route::view('/Posts', 'pages.Dashboard.Posts.Posts',[
+    Route::view('/Posts', 'pages.Dashboard.Posts.Posts', [
         'P' => Post::latest()->paginate(5),
     ])->name('Posts');
     //Create Post page in dashboard
@@ -86,7 +87,9 @@ Route::group(['prefix' => '{language}', 'middleware' => 'auth'], function () {
     //Edit NewsletterEmails page in dashboard
     Route::view('/EditNewsletterEmails', 'pages.Dashboard.NewsletterEmails.EditNewsletterEmails')->name('EditNewsletterEmails');
     //Items page in dashboard
-    Route::view('/Items', 'pages.Dashboard.Items.Items')->name('Items');
+    Route::view('/Items', 'pages.Dashboard.Items.Items', [
+        'items' => Item::latest()->paginate(5),
+    ])->name('Items');
     //Edit Items page in dashboard
     Route::view('/EditItem', 'pages.Dashboard.Items.EditItem')->name('EditItem');
     //Create Item page in dashboard
