@@ -43,10 +43,67 @@
                                             <p class="text-xs font-weight-bold mb-0">{{ $data->ar_name }}</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0"> {!! $data->en_desc !!}</p>
+                                            {{--  --}}
+                                            <p class="text-xs font-weight-bold mb-0">
+                                                <!-- Button trigger modal  -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#english{{ $loop->index }}">
+                                                    {{ __('View Description') }}
+                                                </button>
+                                            <div class="modal fade" id="english{{ $loop->index }}" tabindex="-1"
+                                                aria-labelledby="english{{ $loop->index }}Label" aria-hidden="true">
+                                                <div class="modal-dialog modal-xl">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5"
+                                                                id="english{{ $loop->index }}Label">English
+                                                                Description</h1>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            {!! $data->en_desc !!}
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">{!! $data->ar_desc !!}</p>
+                                            <p class="text-xs font-weight-bold mb-0"></p>
+                                            {{--  --}}
+                                            <p class="text-xs font-weight-bold mb-0">
+                                                <!-- Button trigger modal  -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#arabic{{ $loop->index }}">
+                                                    {{ __('View Description') }}
+                                                </button>
+                                            <div class="modal fade" id="arabic{{ $loop->index }}" tabindex="-1"
+                                                aria-labelledby="arabic{{ $loop->index }}Label" aria-hidden="true">
+                                                <div class="modal-dialog modal-xl">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5"
+                                                                id="arabic{{ $loop->index }}Label">Arabic
+                                                                Description</h1>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            {!! $data->ar_desc !!}
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </p>
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0"><img
