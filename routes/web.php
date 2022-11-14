@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\HomePage\HomePageController;
 use App\Models\NewsletterEmail;
+use App\Models\Post;
+use App\Models\Services;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -64,13 +66,17 @@ Route::group(['prefix' => '{language}', 'middleware' => 'auth'], function () {
     //Statistics page in dashboard
     Route::view('/Statistics', 'pages.Dashboard.Statistics.Statistics')->name('Statistics');
     //Services page in dashboard
-    Route::view('/Services', 'pages.Dashboard.Services.Services')->name('Services');
+    Route::view('/Services', 'pages.Dashboard.Services.Services',[
+        'S' => Services::latest()->paginate(5),
+    ])->name('Services');
     //Edit Service page in dashboard
     Route::view('/EditService', 'pages.Dashboard.Services.EditService')->name('EditService');
     //Create Service page in dashboard
     Route::view('/CreateService', 'pages.Dashboard.Services.CreateService')->name('CreateService');
     //Posts page in dashboard
-    Route::view('/Posts', 'pages.Dashboard.Posts.Posts')->name('Posts');
+    Route::view('/Posts', 'pages.Dashboard.Posts.Posts',[
+        'P' => Post::latest()->paginate(5),
+    ])->name('Posts');
     //Create Post page in dashboard
     Route::view('/CreatePost', 'pages.Dashboard.Posts.CreatePost')->name('CreatePost');
     //Edit Post page in dashboard
