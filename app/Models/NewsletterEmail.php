@@ -11,13 +11,13 @@ class NewsletterEmail extends Model
     protected $table = "newsletter_emails";
     protected $primaryKey = "newsletter_email_id";
     protected $fillable = [
-        'email',
+        'email','keywords'
     ];
 
 
     public  static function search($search)
     {
         return empty($search) ? static::query()
-            : static::query()->where('email', 'like', '%' . $search . '%');
+            : static::query()->where('email', 'like', '%' . $search . '%')->orWhere('keywords', 'like', '%' . $search . '%');
     }
 }

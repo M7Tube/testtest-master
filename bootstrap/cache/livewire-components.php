@@ -23,6 +23,7 @@
   'home-page.home-page' => 'App\\Http\\Livewire\\HomePage\\HomePage',
   'items.items' => 'App\\Http\\Livewire\\Items\\Items',
   'items.show-item' => 'App\\Http\\Livewire\\Items\\ShowItem',
+  'landingpage.landingpage1' => 'App\\Http\\Livewire\\Landingpage\\Landingpage1',
   'messages.send-message' => 'App\\Http\\Livewire\\Messages\\SendMessage',
   'newsletter-email' => 'App\\Http\\Livewire\\NewsletterEmail',
   'post.all-post' => 'App\\Http\\Livewire\\Post\\AllPost',

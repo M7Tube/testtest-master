@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('newsletter_emails', function (Blueprint $table) {
             $table->id('newsletter_email_id');
-            $table->string('email');
+            $table->string('email')->unique();
+            $table->string('keywords');
             $table->timestamps();
         });
     }

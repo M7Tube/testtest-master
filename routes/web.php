@@ -41,6 +41,7 @@ Route::view('language/{language}/posts', 'pages.Post.AllPost')->name('showAllPos
 Route::view('/{language}/Item/{id}', 'pages.Items.ShowItem')->name('ShowItem');
 //Single Service page
 Route::view('/{language}/Service/{id}', 'pages.Services.ShowService')->name('ShowService');
+Route::view('/LandingPage/1', 'pages.LandingPage.1')->name('LandingPage.1');
 
 Route::group(['prefix' => '{language}', 'middleware' => 'auth'], function () {
 
@@ -76,7 +77,7 @@ Route::group(['prefix' => '{language}', 'middleware' => 'auth'], function () {
     Route::view('/CreateService', 'pages.Dashboard.Services.CreateService')->name('CreateService');
     //Posts page in dashboard
     Route::view('/Posts', 'pages.Dashboard.Posts.Posts', [
-        'P' => Post::latest()->paginate(5),
+        'P' => Post::latest()->with('user')->paginate(5),
     ])->name('Posts');
     //Create Post page in dashboard
     Route::view('/CreatePost', 'pages.Dashboard.Posts.CreatePost')->name('CreatePost');
@@ -88,7 +89,7 @@ Route::group(['prefix' => '{language}', 'middleware' => 'auth'], function () {
     Route::view('/EditNewsletterEmails', 'pages.Dashboard.NewsletterEmails.EditNewsletterEmails')->name('EditNewsletterEmails');
     //Items page in dashboard
     Route::view('/Items', 'pages.Dashboard.Items.Items', [
-        'items' => Item::latest()->paginate(5),
+        'items' => Item::latest()->with('user')->paginate(5),
     ])->name('Items');
     //Edit Items page in dashboard
     Route::view('/EditItem', 'pages.Dashboard.Items.EditItem')->name('EditItem');

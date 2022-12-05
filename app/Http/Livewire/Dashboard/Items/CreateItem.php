@@ -21,7 +21,8 @@ class CreateItem extends Component
     public $price;
     public $buy_link;
     public $buy_link_text;
-    public $buy_link_title_text;
+    public $ar_buy_link_title_text;
+    public $en_buy_link_title_text;
     public $free_item_with_email_send;
     public $email_text;
     public $email_file;
@@ -38,6 +39,13 @@ class CreateItem extends Component
         ]);
         $this->picture->storeAs('img/', $this->picture->getClientOriginalName());
     }
+    public function updatedEmailFile()
+    {
+        $this->validate([
+            'email_file' => ['mimes:pdf'],
+        ]);
+        $this->email_file->storeAs('pdf/', $this->email_file->getClientOriginalName());
+    }
     //l
     public function create()
     {
@@ -50,10 +58,11 @@ class CreateItem extends Component
             'price' => ['integer'],
             'buy_link' => ['string'],
             'buy_link_text' => ['string'],
-            'buy_link_title_text' => ['string'],
+            'ar_buy_link_title_text' => ['string'],
+            'en_buy_link_title_text' => ['string'],
             'free_item_with_email_send' => ['boolean'],
             'email_text' => ['string'],
-            'email_file' => ['string'],
+            // 'email_file' => ['mimes:pdf'],
             'user_id' => ['required', 'integer', 'exists:users,user_id'],
         ]);
         Item::Create([
@@ -65,10 +74,11 @@ class CreateItem extends Component
             'price' => $this->price ?? null,
             'buy_link' => $this->buy_link ?? null,
             'buy_link_text' => $this->buy_link_text ?? null,
-            'buy_link_title_text' => $this->buy_link_title_text ?? null,
+            'ar_buy_link_title_text' => $this->ar_buy_link_title_text ?? null,
+            'en_buy_link_title_text' => $this->en_buy_link_title_text ?? null,
             'free_item_with_email_send' => $this->free_item_with_email_send ?? 0,
             'email_text' => $this->email_text ?? null,
-            'email_file' => $this->email_file ?? null,
+            'email_file' => $this->email_file->getClientOriginalName() ?? null,
             'user_id' => $this->user_id,
         ]);
         $this->clear();

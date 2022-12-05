@@ -19,7 +19,7 @@
                                                                     <div class="form-floating mb-1">
                                                                         <input class="form-control" id="en_name"
                                                                             type="text" autocomplete="off"
-                                                                            wire:model="en_name" />
+                                                                            wire:model.lazy="en_name" />
                                                                         <span class="text-danger">
                                                                             @error('en_name')
                                                                                 {{ $message }}
@@ -51,7 +51,7 @@
                                                                     <div class="form-floating mb-1">
                                                                         <input class="form-control" id="ar_name"
                                                                             type="text" autocomplete="off"
-                                                                            wire:model="ar_name" />
+                                                                            wire:model.lazy="ar_name" />
                                                                         <span class="text-danger">
                                                                             @error('ar_name')
                                                                                 {{ $message }}
@@ -154,7 +154,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="mb-3">
                                     <div class="my-2 col-12">
                                         <div class="Scard card shadow-lg border-2 rounded-lg">
@@ -167,7 +167,7 @@
                                                                     <div class="form-floating mb-1">
                                                                         <input class="form-control" id="buy_link"
                                                                             type="text" autocomplete="off"
-                                                                            wire:model="buy_link">
+                                                                            wire:model.lazy="buy_link">
                                                                         <span class="text-danger">
                                                                             @error('buy_link')
                                                                                 {{ $message }}
@@ -197,9 +197,207 @@
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="form-floating mb-1">
+                                                                        <input class="form-control" id="buy_link_text"
+                                                                            type="text" autocomplete="off"
+                                                                            wire:model.lazy="buy_link_text">
+                                                                        <span class="text-danger">
+                                                                            @error('buy_link_text')
+                                                                                {{ $message }}
+                                                                            @enderror
+                                                                        </span>
+                                                                        <label>{{ __('Buy Link Text') }}
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="my-2 col-12">
+                                        <div class="Scard card shadow-lg border-2 rounded-lg">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="media">
+                                                        <div class="media-body text-right">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-floating mb-1">
+                                                                        <input class="form-control"
+                                                                            id="ar_buy_link_title_text" type="text"
+                                                                            autocomplete="off"
+                                                                            wire:model.lazy="ar_buy_link_title_text">
+                                                                        <span class="text-danger">
+                                                                            @error('ar_buy_link_title_text')
+                                                                                {{ $message }}
+                                                                            @enderror
+                                                                        </span>
+                                                                        <label>{{ __('Arabic Buy Link Title Text') }}
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="my-2 col-12">
+                                        <div class="Scard card shadow-lg border-2 rounded-lg">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="media">
+                                                        <div class="media-body text-right">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-floating mb-1">
+                                                                        <input class="form-control"
+                                                                            id="en_buy_link_title_text" type="text"
+                                                                            autocomplete="off"
+                                                                            wire:model.lazy="en_buy_link_title_text">
+                                                                        <span class="text-danger">
+                                                                            @error('en_buy_link_title_text')
+                                                                                {{ $message }}
+                                                                            @enderror
+                                                                        </span>
+                                                                        <label>{{ __('English Buy Link Title Text') }}
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="my-2 col-12">
+                                        <div class="Scard card shadow-lg border-2 rounded-lg">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="media">
+                                                        <div class="media-body text-right">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-floating mb-1">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                wire:model.lazy="free_item_with_email_send"
+                                                                                type="checkbox">
+                                                                            <label class="form-check-label"
+                                                                                for="flexCheckDefault">
+                                                                                {{ __('Free item ?') }}
+                                                                            </label>
+                                                                            <span class="text-danger">
+                                                                                @error('free_item_with_email_send')
+                                                                                    {{ $message }}
+                                                                                @enderror
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="my-2 col-12">
+                                        <div class="Scard card shadow-lg border-2 rounded-lg">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="media">
+                                                        <div class="media-body text-right">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-floating mb-1">
+                                                                        <input class="form-control" id="email_text"
+                                                                            type="text" autocomplete="off"
+                                                                            wire:model.lazy="email_text">
+                                                                        <span class="text-danger">
+                                                                            @error('email_text')
+                                                                                {{ $message }}
+                                                                            @enderror
+                                                                        </span>
+                                                                        <label>{{ __('Email Text') }}
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="my-2 col-12">
+                                        <div class="Scard card shadow-lg border-2 rounded-lg">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="media">
+                                                        <div class="media-body text-right">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-floating mb-1">
+                                                                        <input class="form-control" id="email_file"
+                                                                            type="file" autocomplete="off"
+                                                                            wire:model="email_file" />
+                                                                        <span class="text-danger">
+                                                                            @error('email_file')
+                                                                                {{ $message }}
+                                                                            @enderror
+                                                                        </span>
+                                                                        <label>{{ __('Email File') }}
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="my-2 col-12">
+                                        <div class="Scard card shadow-lg border-2 rounded-lg">
+                                            <div class="card-content">
+                                                <div class="card-body">
+                                                    <div class="media">
+                                                        <div class="media-body text-right">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-floating mb-1">
                                                                         <input class="form-control" id="price"
                                                                             type="text" autocomplete="off"
-                                                                            wire:model="price">
+                                                                            wire:model.lazy="price">
                                                                         <span class="text-danger">
                                                                             @error('price')
                                                                                 {{ $message }}
