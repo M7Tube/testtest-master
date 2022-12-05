@@ -31,6 +31,7 @@ class Landingpage1 extends Component
             if(!str_contains($check->keywords,'instagram,')){
                 $check->keywords=$check->keywords.'instagram,';
                 $check->save();
+                Mail::to($this->email)->send(new ThanksMail());
                 $this->reset();
                 $this->successmessage='تم تسجيل أيميلك بنجاح';
             }else{
