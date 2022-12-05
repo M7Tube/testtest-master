@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire\Landingpage;
 
+use App\Mail\ThanksMail;
 use App\Models\NewsletterEmail;
 use Livewire\Component;
+use Illuminate\Support\Facades\Mail;
 
 class Landingpage1 extends Component
 {
@@ -22,6 +24,7 @@ class Landingpage1 extends Component
                 'email'=>$this->email,
                 'keywords'=>'instagram,'
             ]);
+            Mail::to($this->email)->send(new ThanksMail());
             $this->reset();
             $this->successmessage='تم تسجيل أيميلك بنجاح';
         }else{
