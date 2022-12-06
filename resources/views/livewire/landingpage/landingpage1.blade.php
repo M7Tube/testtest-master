@@ -80,7 +80,7 @@
                 نعم فهذا البكج لك</h1>
             <a href="https://api.whatsapp.com/message/QJKFMT2DFCA5B1?autoload=1&amp;app_absent=0" target="_blank"
                 class="u-border-none u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
-                style=" display: flex; align-content: center; justify-content: center; ">
+                style=" display: flex; align-content: center; justify-content: center; font-size: 25px;">
                 تواصل معي
                 &nbsp;<br>لصناعة البكج الخاص بحسابك
             </a>
