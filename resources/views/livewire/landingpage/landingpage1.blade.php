@@ -74,11 +74,15 @@
         </div>
     </section>
     <section class="u-align-center u-clearfix u-grey-10 u-section-3" id="sec-615e">
-        <div class="u-align-center u-clearfix u-sheet u-sheet-1">
-            <h1 class="u-text u-title u-text-1">إذا كان جوابك نعم فهذا البكج لك</h1>
+        <div class="u-align-center u-clearfix u-sheet u-sheet-1"
+            style="align-content: center; justify-content: center;">
+            <h1 class="u-text u-title u-text-1" style="align-content: center; justify-content: center;">إذا كان جوابك
+                نعم فهذا البكج لك</h1>
             <a href="https://api.whatsapp.com/message/QJKFMT2DFCA5B1?autoload=1&amp;app_absent=0" target="_blank"
-                class="u-border-none u-btn u-btn-round u-button-style u-radius-50 u-btn-1">تواصل معي
-                الأن&nbsp;<br>لصناعة البكج الخاص بك
+                class="u-border-none u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
+                style=" display: flex; align-content: center; justify-content: center; ">
+                تواصل معي
+                &nbsp;<br>لصناعة البكج الخاص بحسابك
             </a>
         </div>
     </section>
@@ -125,9 +129,11 @@
             </div>
             <h2 class="u-align-center u-text u-text-7">وهذا يعني انه يوجد كل ما تحتاجه للبدء بشكل صحيح في التسويق على
                 الانستقرام</h2>
-            <a href="https://api.whatsapp.com/message/QJKFMT2DFCA5B1?autoload=1&amp;app_absent=0"
-                class="u-align-center u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1"
-                target="_blank"> &nbsp;تواصل معي الأن لبناء&nbsp;<br>الاستراتيجية الخاصة بك
+            <a href="https://api.whatsapp.com/message/QJKFMT2DFCA5B1?autoload=1&amp;app_absent=0" target="_blank"
+                class="u-border-none u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
+                style=" display: flex; align-content: center; justify-content: center; ">
+                تواصل معي
+                &nbsp;<br>لصناعة البكج الخاص بحسابك
             </a>
         </div>
     </section>
@@ -205,9 +211,11 @@
                     </div>
                 </div>
             </div>
-            <a href="https://api.whatsapp.com/message/QJKFMT2DFCA5B1?autoload=1&amp;app_absent=0"
-                class="u-align-center u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1"
-                target="_blank"> &nbsp;تواصل معي الأن لبناء<br>الاستراتيجية الخاصة بك
+            <a href="https://api.whatsapp.com/message/QJKFMT2DFCA5B1?autoload=1&amp;app_absent=0" target="_blank"
+                class="u-border-none u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
+                style=" display: flex; align-content: center; justify-content: center; ">
+                تواصل معي
+                &nbsp;<br>لصناعة البكج الخاص بحسابك
             </a>
         </div>
     </section>
@@ -231,10 +239,11 @@
                                     الخاص بهم<br>كمان أنني قمت بتنمية صفحتي على الانستقرام إلى 57 ألف متابع خلال 4 أشهر
                                 </p>
                                 <a href="https://api.whatsapp.com/message/QJKFMT2DFCA5B1?autoload=1&amp;app_absent=0"
-                                    class="u-active-palette-2-base u-align-right u-border-1 u-border-active-palette-2-base u-border-hover-palette-2-base u-border-white u-btn u-btn-round u-button-style u-hover-palette-2-base u-palette-1-base u-radius-50 u-text-active-white u-text-hover-white u-btn-1"
-                                    data-animation-name="" data-animation-duration="0" data-animation-delay="0"
-                                    data-animation-direction="" target="_blank"> &nbsp;تواصل معي الأن
-                                    لبناء<br>الاستراتيجية الخاصة بك
+                                    target="_blank"
+                                    class="u-border-none u-btn u-btn-round u-button-style u-radius-50 u-btn-1"
+                                    style=" display: flex; align-content: center; justify-content: center; ">
+                                    تواصل معي
+                                    &nbsp;<br>لصناعة البكج الخاص بحسابك
                                 </a>
                             </div>
                         </div>
@@ -250,7 +259,9 @@
                 الانستقرام مصدر دخلك وتخلص من الوظيفة</h2>
             <a href="https://api.whatsapp.com/message/QJKFMT2DFCA5B1?autoload=1&amp;app_absent=0"
                 class="u-border-none u-btn u-btn-round u-button-style u-palette-1-base u-radius-50 u-btn-1"
-                target="_blank">تواصل معي الأن لصناعة<br>&nbsp;الأستراتيجية الخاصة بحسابك
+                target="_blank" style=" display: flex; align-content: center; justify-content: center; ">
+                تواصل معي
+                &nbsp;<br>لصناعة البكج الخاص بحسابك
             </a>
         </div>
     </section>
