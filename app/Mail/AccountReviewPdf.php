@@ -7,6 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Attachment;
+
 class AccountReviewPdf extends Mailable
 {
     use Queueable, SerializesModels;
@@ -22,11 +23,17 @@ class AccountReviewPdf extends Mailable
     {
         // $this->pdf = $pdf;
     }
-
+    /**
+     * Get the attachments for the message.
+     *
+     * @return \Illuminate\Mail\Mailables\Attachment[]
+     */
     public function attachments()
     {
         return [
-            Attachment::fromPath('../storage/app/pdf/pdf_file-7.pdf'),
+            Attachment::fromStorage('../storage/app/pdf/pdf_file-7.pdf')
+                    ->as('name.pdf')
+                    ->withMime('application/pdf'),
         ];
     }
 
