@@ -11,31 +11,31 @@ use Illuminate\Mail\Mailables\Attachment;
 class AccountReviewPdf extends Mailable
 {
     use Queueable, SerializesModels;
-    // public $pdf;
+    public $pdf;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
-    // $pdf
+    public function __construct($pdf)
     {
-        // $this->pdf = $pdf;
+        $this->pdf = $pdf;
+        $this->attach('../storage/app/pdf/'.$pdf);
     }
-    /**
-     * Get the attachments for the message.
-     *
-     * @return \Illuminate\Mail\Mailables\Attachment[]
-     */
-    public function attachments()
-    {
-        return [
-            Attachment::fromStorage('../storage/app/pdf/pdf_file-7.pdf')
-                    ->as('name.pdf')
-                    ->withMime('application/pdf'),
-        ];
-    }
+    // /**
+    //  * Get the attachments for the message.
+    //  *
+    //  * @return \Illuminate\Mail\Mailables\Attachment[]
+    //  */
+    // public function attachments()
+    // {
+    //     return [
+    //         Attachment::fromStorage('../storage/app/pdf/pdf_file-7.pdf')
+    //                 ->as('name.pdf')
+    //                 ->withMime('application/pdf'),
+    //     ];
+    // }
 
     /**
      * Build the message.

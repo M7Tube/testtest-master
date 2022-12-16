@@ -70,8 +70,7 @@ class AccountsNeedReview extends Component
                 $check->status = 0;
                 $check->save();
             } else {
-                Mail::to($check->email)->send(new AccountReviewPdf());
-
+                Mail::to($check->email)->send(new AccountReviewPdf($this->pdf->getClientOriginalName()));
                 $check->status = 1;
                 $check->save();
             }
