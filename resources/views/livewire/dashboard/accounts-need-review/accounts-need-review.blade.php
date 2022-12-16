@@ -37,7 +37,7 @@
                                             <p class="text-xs font-weight-bold mb-0">{{ $data->email }}</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">{{ $data->url }}</p>
+                                            <p class="text-xs font-weight-bold mb-0">{{ $data->url }} <span class="text-danger">{{__('Check the url first !!! Then Click')}}</span> <a href="{{ $data->url }}" target="_blank" style="color: blue;">{{__('Visit URL')}}</a></p>
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">{{ $data->message }}</p>
