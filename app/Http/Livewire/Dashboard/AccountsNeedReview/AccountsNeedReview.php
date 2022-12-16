@@ -86,7 +86,7 @@ class AccountsNeedReview extends Component
             'livewire.dashboard.accounts-need-review.accounts-need-review',
             [
                 'ANR' => ModelsAccountsNeedReview::search($this->search)
-                    ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
+                    ->latest()
                     ->paginate(20),
             ]
         );
