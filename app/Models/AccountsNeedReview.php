@@ -17,4 +17,10 @@ class AccountsNeedReview extends Model
         'url',
         'status',
     ];
+
+    public  static function search($search)
+    {
+        return empty($search) ? static::query()
+            : static::query()->where('email', 'like', '%' . $search . '%')->orWhere('name', 'like', '%' . $search . '%');
+    }
 }

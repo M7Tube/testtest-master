@@ -1,4 +1,5 @@
 <?php return array (
+  'dashboard.accounts-need-review.accounts-need-review' => 'App\\Http\\Livewire\\Dashboard\\AccountsNeedReview\\AccountsNeedReview',
   'dashboard.dashboard' => 'App\\Http\\Livewire\\Dashboard\\Dashboard',
   'dashboard.items.create-item' => 'App\\Http\\Livewire\\Dashboard\\Items\\CreateItem',
   'dashboard.items.edit-items' => 'App\\Http\\Livewire\\Dashboard\\Items\\EditItems',

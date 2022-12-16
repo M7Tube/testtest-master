@@ -87,6 +87,8 @@ Route::group(['prefix' => '{language}', 'middleware' => 'auth'], function () {
     Route::view('/NewsletterEmails', 'pages.Dashboard.NewsletterEmails.NewsletterEmails')->name('NewsletterEmails');
     //Edit NewsletterEmails page in dashboard
     Route::view('/EditNewsletterEmails', 'pages.Dashboard.NewsletterEmails.EditNewsletterEmails')->name('EditNewsletterEmails');
+    //AccountsNeedReview page in dashboard
+    Route::view('/AccountsNeedReview', 'pages.Dashboard.AccountsNeedReview.AccountsNeedReview')->name('AccountsNeedReview');
     //Items page in dashboard
     Route::view('/Items', 'pages.Dashboard.Items.Items', [
         'items' => Item::latest()->with('user')->paginate(5),
