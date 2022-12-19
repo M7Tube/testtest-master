@@ -36,12 +36,9 @@ class Landingpage2 extends Component
                 $this->successmessage='تم تسجيل طلبك بنجاح';
             } else {
                 $this->reset();
-                $this->successmessage='تم تسجيل طلبك بنجاح';
                 $this->successmessage='أيميلك موجود بالفعل';
             }
         }
-        $this->reset();
-        $this->successmessage = 'تم تسجيل طلبك بنجاح';
     }
 
     public function render()
