@@ -25,6 +25,7 @@
   'items.items' => 'App\\Http\\Livewire\\Items\\Items',
   'items.show-item' => 'App\\Http\\Livewire\\Items\\ShowItem',
   'landingpage.landingpage1' => 'App\\Http\\Livewire\\Landingpage\\Landingpage1',
+  'landingpage.landingpage2' => 'App\\Http\\Livewire\\Landingpage\\Landingpage2',
   'messages.send-message' => 'App\\Http\\Livewire\\Messages\\SendMessage',
   'newsletter-email' => 'App\\Http\\Livewire\\NewsletterEmail',
   'post.all-post' => 'App\\Http\\Livewire\\Post\\AllPost',

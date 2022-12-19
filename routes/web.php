@@ -42,6 +42,7 @@ Route::view('/{language}/Item/{id}', 'pages.Items.ShowItem')->name('ShowItem');
 //Single Service page
 Route::view('/{language}/Service/{id}', 'pages.Services.ShowService')->name('ShowService');
 Route::view('/LandingPage/1', 'pages.LandingPage.1')->name('LandingPage.1');
+Route::view('/LandingPage/2', 'pages.LandingPage.2')->name('LandingPage.2');
 
 Route::group(['prefix' => '{language}', 'middleware' => 'auth'], function () {
 
