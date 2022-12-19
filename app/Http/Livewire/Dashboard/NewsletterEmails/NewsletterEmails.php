@@ -32,9 +32,7 @@ class NewsletterEmails extends Component
         return view(
             'livewire.dashboard.newsletter-emails.newsletter-emails',
             [
-                'NLE' => NewsletterEmail::search($this->search)
-                    ->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
-                    ->simplePaginate(5),
+                'NLE' => NewsletterEmail::latest()->paginate(10),
             ]
         );
     }
