@@ -43,13 +43,24 @@
                         <label for="email-6797" class="u-label">Email</label>
                         <input type="email" placeholder="Email" id="email-6797" wire:model="email"
                             class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+                        <span style="color: red;">
+                            @error('email')
+                                {{ $message }}
+                            @enderror
+                        </span>
                     </div>
                     <div class="u-align-center u-form-group u-form-submit u-form-group-4">
-                        <a wire:click.prevent="submit" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-50 u-btn-1">سجل
+                        <a wire:click.prevent="submit"
+                            class="u-btn u-btn-round u-btn-submit u-button-style u-radius-50 u-btn-1">سجل
                             الأن</a>
                         <input type="submit" value="submit" class="u-form-control-hidden">
                     </div>
                 </form>
+                <span style="color: green;">
+                    @if ($successmessage)
+                        {{ $successmessage }}
+                    @endif
+                </span>
             </div>
         </div>
     </section>
