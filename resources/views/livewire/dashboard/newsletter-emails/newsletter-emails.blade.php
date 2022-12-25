@@ -14,8 +14,10 @@
                                 <tr>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         {{ __('Email') }}</th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            {{ __('Keywords') }}</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        {{ __('Keywords') }}</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        {{ __('Created at') }}</th>
                                     <th class="">
                                         {{-- <a href="/language/en#newsletter" target="blank"
                                             class="text-white btn-success btn font-weight-bold text-xs"
@@ -33,6 +35,9 @@
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">{{ $data->keywords }}</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">{{ $data->created_at }}</p>
                                         </td>
                                         <td class="align-middle">
                                             <a href="{{ route('EditNewsletterEmails', [app()->getLocale(), 'id' => $data->newsletter_email_id]) }}"
