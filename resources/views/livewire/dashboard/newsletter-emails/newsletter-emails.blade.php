@@ -23,7 +23,7 @@
                                         {{-- <a href="/language/en#newsletter" target="blank"
                                             class="text-white btn-success btn font-weight-bold text-xs"
                                             data-toggle="tooltip" data-original-title="Edit user">
-                                            {{ __('Create') }}
+                                            {{ __('Create') }} 
                                         </a> --}}
                                     </th>
                                 </tr>
