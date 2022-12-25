@@ -19,6 +19,7 @@
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         {{ __('Created at') }}</th>
                                     <th class="">
+                                        {{__('Total : ')}}{{ $NLE->total() }}
                                         {{-- <a href="/language/en#newsletter" target="blank"
                                             class="text-white btn-success btn font-weight-bold text-xs"
                                             data-toggle="tooltip" data-original-title="Edit user">
