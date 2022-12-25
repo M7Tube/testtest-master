@@ -12,6 +12,7 @@ class Pdf extends Component
 {
     use LivewireDashboardTrait;
     use LivewireWithPagination;
+    protected $paginationTheme = 'bootstrap';
 
     public $pdf_id;
     public $pdf;

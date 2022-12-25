@@ -11,6 +11,7 @@ class Posts extends Component
 {
     use LivewireDashboardTrait;
     use LivewireWithPagination;
+    protected $paginationTheme = 'bootstrap';
 
     // public $post_id;
     // public $main_title;

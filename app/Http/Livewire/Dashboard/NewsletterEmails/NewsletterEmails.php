@@ -12,7 +12,7 @@ class NewsletterEmails extends Component
 {
     use LivewireDashboardTrait;
     use LivewireWithPagination;
-
+    protected $paginationTheme = 'bootstrap';
     public $newsletter_email_id;
     public $email;
 
@@ -32,7 +32,7 @@ class NewsletterEmails extends Component
         return view(
             'livewire.dashboard.newsletter-emails.newsletter-emails',
             [
-                'NLE' => NewsletterEmail::latest()->paginate(10),
+                'NLE' => NewsletterEmail::latest()->paginate(25),
             ]
         );
     }

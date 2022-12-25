@@ -15,6 +15,7 @@ class AccountsNeedReview extends Component
     use LivewireDashboardTrait;
     use LivewireWithPagination;
     use WithFileUploads;
+    protected $paginationTheme = 'bootstrap';
 
     public $pdf;
 
@@ -87,7 +88,7 @@ class AccountsNeedReview extends Component
             [
                 'ANR' => ModelsAccountsNeedReview::search($this->search)
                     ->latest()
-                    ->paginate(20),
+                    ->paginate(25),
             ]
         );
     }

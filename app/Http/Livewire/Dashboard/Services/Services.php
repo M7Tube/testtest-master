@@ -11,5 +11,6 @@ class Services extends Component
 {
     use LivewireDashboardTrait;
     use LivewireWithPagination;
+    protected $paginationTheme = 'bootstrap';
 
 }
